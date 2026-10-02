@@ -1,0 +1,15 @@
+ What i did today
+#2 hour git practice and setup
+#1 hr english practice
+#3 hr kubernetes lab
+
+#tommorow task
+#Ansible, terraform task,and deployment with 2 replica task
+# What i did today
+#2 hour git practice and setup
+#1 hr english practice
+#3 hr kubernetes lab
+
+#tommorow task
+#Ansible, terraform task,and deployment with 2 replica task
+
