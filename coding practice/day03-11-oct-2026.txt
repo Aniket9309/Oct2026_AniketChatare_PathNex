@@ -1,0 +1,104 @@
+  Ansible - Install Apache and Start Service Basics
+
+  - name: Install Apache and Start Apache
+    hosts: all
+    become: yes
+    task: 
+      - name: Install apache
+        yum: 
+          name: httpd
+          state: present
+    
+      - name: Start apche
+        service:
+          name: httpd
+          state: started
+          enabled: yes
+
+
+
+Terraform - Ec2  Instacnce (t3.medium)
+
+
+   provider "aws"{
+
+     region = "ap-south-1"
+}
+
+   resource "aws_instance" "my_ec2" {
+     ami           = "ami-hbabjkabhdfdbja"
+     instance_type = "t3.medium"
+
+     tags = {
+     
+     Name = "MY_EC2"
+    
+    }
+
+ }
+
+
+#kubernets - create a Replicaser With 3	 replicas
+
+apiVersion: apps/v1
+kind: Replicaset
+metadata:
+  name: new-replicaset
+
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      app: new-app
+  template:
+    metadata:
+      labels:
+        app: new-app
+    spec:
+      container:
+        - name: app
+          image: nginx
+          ports:
+            - contaienrPort: 80
+
+Shell-Script -User Info
+
+#!/bin/bash
+echo  "Cureent user$(whoami)"
+echo  "Current user groups: $(groups)"
+
+
+Docker
+
+#Docker File for Nginx Web Server
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/index.html
+
+#HTML
+
+h1> Hello Pathnex<h1
+
+#Bash
+#Real Path
+/usr/share/nginx/html
+
+#Bash
+docker build -t pathnex-nginx .
+docker run -d -p 80:80 new-nginx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
